@@ -1,0 +1,19 @@
+<div>
+  <%= form_for @dummy do |f| %>
+    <div>
+      Str_field_one: <%= f.text_field :dum_str_field_one %>
+    </div>
+
+    <div>
+      Int field_two: <%= f.text_field :dum_int_field_two %>
+    </div>
+
+    <%= f.fields_for :sub_stuff  do |ff| %>
+      <div>
+        Sub stuff field: <%= ff.text_field :sub_stuff_field %><br />
+      </div>
+    <% end %>
+
+    <%= f.submit %>
+  <% end %>
+</div>
